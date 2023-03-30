@@ -21,7 +21,13 @@ venues = ['M. Chinnaswamy Stadium', 'Punjab Cricket Association Stadium','Arun J
 
 model = pickle.load(open('model.pkl','rb'))
 st.title('IPL Win % Predictor')
-
+st.set_page_config(
+    page_title="My Streamlit App",
+    page_icon=":smiley:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    background_image="ipl.jpg"
+)
 col1, col2 = st.columns(2)
 
 with col1:
