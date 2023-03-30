@@ -58,15 +58,3 @@ if st.button('Predict Probability'):
     st.header(batting_team + "- " + str(round(win*100)) + "%")
     st.header(bowling_team + "- " + str(round(loss*100)) + "%")
 
-
-background = "ipl.jpg"
-page_bg_img = '''
-<style>
-body {
-background-image: url("%s");
-background-size: cover;
-}
-</style>
-''' % background
-
-st.markdown(page_bg_img, unsafe_allow_html=True)
