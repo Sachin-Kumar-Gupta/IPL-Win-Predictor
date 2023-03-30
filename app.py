@@ -53,7 +53,7 @@ if st.button('Predict Probability'):
     input_df = pd.DataFrame({'venue':[Venue],'batting_team':[batting_team],'bowling_team':[bowling_team],'First innings score':[target],'crr':[crr],'rrr':[rrr],'wickets':[wickets],'balls':[balls]})
 
     result = model.predict_proba(input_df)
-    loss = result[0][1]
-    win = result[0][0]
+    loss = result[0][0]
+    win = result[0][1]
     st.header(batting_team + "- " + str(round(win*100)) + "%")
     st.header(bowling_team + "- " + str(round(loss*100)) + "%")
